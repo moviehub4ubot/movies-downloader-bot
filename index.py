@@ -14,13 +14,13 @@ bot = Bot(TOKEN)
 
 
 def welcome(update, context) -> None:
-    update.message.reply_text(f"Hello {update.message.from_user.first_name}, Welcome to SB Movies.\n"
+    update.message.reply_text(f"Hello Friends{update.message.from_user.first_name}, Welcome to Hindi Movies.\n"
                               f"🔥 Download Your Favourite Movies For 💯 Free And 🍿 Enjoy it.")
     update.message.reply_text("👇 Enter Movie Name 👇")
 
 
 def find_movie(update, context):
-    search_results = update.message.reply_text("Processing...")
+    search_results = update.message.reply_text("Searching In Database...")
     query = update.message.text
     movies_list = search_movies(query)
     if movies_list:
