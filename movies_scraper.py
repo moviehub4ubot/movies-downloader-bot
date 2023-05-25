@@ -10,7 +10,7 @@ def search_movies(query):
     movies_list = []
     movies_details = {}
    
-    website = BeautifulSoup(requests.get(f"https://www.filmyzilla.cn.com/?s={query.replace(' ', '+')}").text, "html.parser")
+    website = BeautifulSoup(requests.get(f"https://84.46.254.230/?s={query.replace(' ', '+')}").text, "html.parser")
     movies = website.find_all("a", {'class': 'ml-mask jt'})
     for movie in movies:
         if movie:
